@@ -12,6 +12,7 @@ function App() {
         <p>
           A quiz game for the Natural History Museum Tring
         </p>
+        <button>Play!</button>
     </>
   )
 }
