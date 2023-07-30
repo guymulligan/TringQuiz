@@ -12,8 +12,6 @@ function App() {
         <input>Your name</input>
     </>
   )
-
-  
 }
 
 export default App
