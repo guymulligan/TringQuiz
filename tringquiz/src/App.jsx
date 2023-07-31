@@ -3,24 +3,128 @@ import './App.css';
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
-    answer: '4',
+    question: 'Which animal is this?',
+    answer: '1',
   },
+
   {
-    question: 'What is the capital of France?',
-    answer: 'Paris',
+    question: 'Which animal is this?',
+    answer: '1',
   },
+
   {
-    question: 'Which planet is known as the Red Planet?',
-    answer: 'Mars',
+    question: 'Which animal is this?',
+    answer: '1',
   },
+
   {
-    question: 'What is the tallest mountain in the world?',
-    answer: 'Mount Everest',
+    question: 'Which animal is this?',
+    answer: '1',
   },
+
   {
-    question: 'Who painted the Mona Lisa?',
-    answer: 'Leonardo da Vinci',
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
+  },
+
+  {
+    question: 'Which animal is this?',
+    answer: '1',
   },
 ];
 
