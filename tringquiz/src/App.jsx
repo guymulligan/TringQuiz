@@ -4,185 +4,185 @@ import './App.css';
 const questions = [
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Black mangabey',
-    imageUrl: '/public/919e7cc0-fad4-4f82-bce9-50a4c4a54717.jpeg'
+    imageUrl: '/919e7cc0-fad4-4f82-bce9-50a4c4a54717.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Black cheeked monkey',
     answer2: 'Black-cheeked monkey',
-    imageUrl: '/public/6e708d3b-ac1e-438e-ba06-a8b5ef6bf25b.jpeg'
+    imageUrl: '/6e708d3b-ac1e-438e-ba06-a8b5ef6bf25b.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Raccoon dog',
-    imageUrl: '/public/08814994-3549-4e8a-b3ce-3f846512437c.jpeg'
+    imageUrl: '/08814994-3549-4e8a-b3ce-3f846512437c.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Aye aye',
     answer2: 'Aye-aye',
-    imageUrl: '/public/8f4c0fce-6886-4fe1-bcda-72ef56048df6.jpeg'
+    imageUrl: '/8f4c0fce-6886-4fe1-bcda-72ef56048df6.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Golden lion tamarin',
-    imageUrl: '/public/1167c4a1-9420-44d8-a1ff-129449586cf3.jpeg'
+    imageUrl: '/1167c4a1-9420-44d8-a1ff-129449586cf3.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Bohemian waxwing',
-    imageUrl: '/public/4d5c937c-d17b-4cb3-884c-38a5dbdd5b01.jpeg'
+    imageUrl: '/4d5c937c-d17b-4cb3-884c-38a5dbdd5b01.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Egyptian vulture',
-    imageUrl: '/public/fcdf4e33-2172-4022-b449-294f5edbc372.jpeg'
+    imageUrl: '/fcdf4e33-2172-4022-b449-294f5edbc372.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Pygmy owl',
-    imageUrl: '/public/5b5189fc-434b-4fc5-9e87-04d056f9e7d7.jpeg'
+    imageUrl: '/5b5189fc-434b-4fc5-9e87-04d056f9e7d7.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Black skimmer',
-    imageUrl: '/public/3303b74f-7caf-4548-bbe4-9f51df1b01ff.jpeg'
+    imageUrl: '/3303b74f-7caf-4548-bbe4-9f51df1b01ff.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 1",
+    hint: "I'm in Gallery 1",
     answer: 'Red bird of paradise',
-    imageUrl: '/public/22072546-18a4-4f25-93fc-4c8761163483.jpeg'
+    imageUrl: '/22072546-18a4-4f25-93fc-4c8761163483.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 3",
+    hint: "I'm in Gallery 3",
     answer: 'Titanacris albipes',
-    imageUrl: '/public/8ab89718-d7a7-4cb5-a913-742451af35c8.jpeg'
+    imageUrl: '/8ab89718-d7a7-4cb5-a913-742451af35c8.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 3",
+    hint: "I'm in Gallery 3",
     answer: 'Bramble shark',
-    imageUrl: '/public/e5ba157b-bc2d-4b2b-90af-bf9fe592cce9.jpeg'
+    imageUrl: '/e5ba157b-bc2d-4b2b-90af-bf9fe592cce9.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 3",
+    hint: "I'm in Gallery 3",
     answer: 'Macrodontia cervicornis',
-    imageUrl: '/public/a4bf2360-d294-458f-a571-0770b78e4cc3.jpeg'
+    imageUrl: '/a4bf2360-d294-458f-a571-0770b78e4cc3.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 4",
+    hint: "I'm in Gallery 4",
     answer: "Chapman's Zebra",
     answer2: 'Chapmans zebra',
-    imageUrl: '/public/d3fa0ed3-ad15-4e21-9765-c81e3aa20f14.jpeg'
+    imageUrl: '/d3fa0ed3-ad15-4e21-9765-c81e3aa20f14.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 5",
+    hint: "I'm in Gallery 5",
     answer: 'Mule deer',
-    imageUrl: '/public/60801dce-61e2-42a9-bc60-777bc9400dc1.jpeg'
+    imageUrl: '/60801dce-61e2-42a9-bc60-777bc9400dc1.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 5",
+    hint: "I'm in Gallery 5",
     answer: 'Northern Fur Seal',
     answer2: 'Fur seal',
-    imageUrl: '/public/bfa7a676-8885-463f-83ce-17687175b459.jpeg'
+    imageUrl: '/bfa7a676-8885-463f-83ce-17687175b459.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 5",
+    hint: "I'm in Gallery 5",
     answer: 'Siberian Ibex',
-    imageUrl: '/public/16196189-61ed-439c-8074-e02d88975f7f.jpeg'
+    imageUrl: '/16196189-61ed-439c-8074-e02d88975f7f.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 5",
+    hint: "I'm in Gallery 5",
     answer: 'Four horned antelope',
     answer2: 'Four-horned antelope',
-    imageUrl: '/public/8a2f18cf-2bc2-49cc-8e1f-bfd123a94a06.jpeg'
+    imageUrl: '/8a2f18cf-2bc2-49cc-8e1f-bfd123a94a06.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'Numbat',
-    imageUrl: '/public/c812d806-4be5-48e0-981a-4f119f63c8f4.jpeg'
+    imageUrl: '/c812d806-4be5-48e0-981a-4f119f63c8f4.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'Masai Ostrich',
     answer2: 'Ostrich',
-    imageUrl: '/public/b1b0e122-8421-4811-9067-35e9fa13228d.jpeg'
+    imageUrl: '/b1b0e122-8421-4811-9067-35e9fa13228d.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'African Civet',
-    imageUrl: '/public/fd3f6eef-50df-4cd5-a2da-6459821a2978.jpeg'
+    imageUrl: '/fd3f6eef-50df-4cd5-a2da-6459821a2978.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'Palawan tree shrew',
     answer2: 'Palawan treeshrew',
-    imageUrl: '/public/69a85c34-d980-4171-ab9b-15ab38fc0bc9.jpeg'
+    imageUrl: '/69a85c34-d980-4171-ab9b-15ab38fc0bc9.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'Rhinoceros viper',
-    imageUrl: '/public/1321cf79-b8ca-470c-97fa-febf211bb9bd.jpeg'
+    imageUrl: '/1321cf79-b8ca-470c-97fa-febf211bb9bd.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'Blotched blue-tongued skink',
     answer2: 'Blotched blue tongued skink',
-    imageUrl: '/public/1a619ccc-6dc8-426f-ac70-1075a4a66eb7.jpeg'
+    imageUrl: '/1a619ccc-6dc8-426f-ac70-1075a4a66eb7.jpeg'
   },
 
   {
     question: 'Which animal is this?',
-    hint: "I'm in gallery 6",
+    hint: "I'm in Gallery 6",
     answer: 'star tortoise',
-    imageUrl: '/public/7f1d307a-4bb8-41a3-a39c-ffd259f54c23.jpeg'
+    imageUrl: '/7f1d307a-4bb8-41a3-a39c-ffd259f54c23.jpeg'
   },
 ];
 
@@ -238,7 +238,7 @@ function App() {
       {!showResult ? (
         <>
           <h1>Question {currentQuestion + 1}</h1>
-          <p>{questions[currentQuestion].question}</p>
+          <h2>{questions[currentQuestion].question}</h2>
           <p>Hint: {questions[currentQuestion].hint}!</p>
           <img src={questions[currentQuestion].imageUrl} />
           
