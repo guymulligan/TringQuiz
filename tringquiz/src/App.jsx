@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 const questions = [
@@ -202,78 +202,94 @@ const questions = [
     imageUrl: '/7f1d307a-4bb8-41a3-a39c-ffd259f54c23.jpeg'
   },
 ];
-
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  // useState for current question. Starts at 0.
   const [userAnswer, setUserAnswer] = useState('');
-  // useState for answer of questions. Initial state is empty string
   const [showResult, setShowResult] = useState(false);
-  // useState for showing results? Come back to this
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0);
+  const [shuffledQuestions, setShuffledQuestions] = useState([]);
+
+  useEffect(() => {
+    // Shuffle the questions array when the component mounts
+    const shuffledArray = [...questions];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    setShuffledQuestions(shuffledArray.slice(0, 10));
+  }, []);
 
   function handleAnswerChange(event) {
     setUserAnswer(event.target.value);
   }
-  // Updates when user types/changes input field.
-  // event = user's interaction with input field.
-  // event.target.value = user's interaction with input field / DOM element on which the event was triggered (input) / current value of input field
-  // setUserAnswer(event.target.value) = changes value of userAnswer to the new value in the input field
 
   function handleNextQuestion() {
-    if (currentQuestion === questions.length - 1) {
+    if (currentQuestion === 9) {
       setShowResult(true);
     } else {
       const userAnswerTrimmed = userAnswer.toLowerCase().trim();
-      const correctAnswerTrimmed = questions[currentQuestion].answer.toLowerCase().trim();
-      const correctAnswerTrimmed2 = questions[currentQuestion].answer2.toLowerCase().trim();
+      const correctAnswerTrimmed = shuffledQuestions[currentQuestion].answer.toLowerCase().trim();
+      const correctAnswerTrimmed2 = shuffledQuestions[currentQuestion].answer2.toLowerCase().trim();
 
       if (userAnswerTrimmed === correctAnswerTrimmed || userAnswerTrimmed === correctAnswerTrimmed2) {
-        setScore(score+1);
-        setCurrentQuestion((prev) => prev + 1);
-        setUserAnswer('');
-      } else {
-        setCurrentQuestion((prev) => prev + 1);
-        setUserAnswer('');
+        setScore((prevScore) => prevScore + 1);
       }
+
+      setCurrentQuestion((prev) => prev + 1);
+      setUserAnswer('');
     }
   }
-  // if (currentQuestion ===..... = checks if current question is the last Q. If it is, show results. If not, progress to next Q.
-  // userAnswerTrimmed = user's answer to current question, coverted to lowercase, removed leading/trailing spaces (removes case sensitivity)
-  // if (userAnswerTrimmed ===..... = checks if real answer and input answer are equal. Increase score by one. 
-  // setCurrentQuestion((prev) => prev + a) = progress to next Q.
-  // setUserAnswer('') = returns userAnswer to an empty string, ready for next Q.
 
   function handleRestartQuiz() {
     setCurrentQuestion(0);
     setUserAnswer('');
     setShowResult(false);
+
+    // Shuffle the questions array for a new quiz
+    const shuffledArray = [...questions];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    setShuffledQuestions(shuffledArray.slice(0, 10));
+  }
+
+  let content;
+  if (!showResult && shuffledQuestions.length > 0) {
+    content = (
+      <>
+        <h1>Question {currentQuestion + 1}</h1>
+        <h2>{shuffledQuestions[currentQuestion].question}</h2>
+        <p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p>
+        <img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal" />
+        <input
+          type="text"
+          value={userAnswer}
+          onChange={handleAnswerChange}
+          placeholder="Your answer..."
+        />
+        <button onClick={handleNextQuestion}>Next Question</button>
+      </>
+    );
+  } else if (!showResult && shuffledQuestions.length === 0) {
+    content = (
+      <>
+        <p>Loading questions...</p>
+      </>
+    );
+  } else {
+    content = (
+      <>
+        <h1>Quiz complete!</h1>
+        <p>Your correctly spied {score}/10 specimens!</p>
+        <button onClick={handleRestartQuiz}>Play Again?</button>
+      </>
+    );
   }
 
   return (
     <div className="App">
-      {!showResult ? (
-        <>
-          <h1>Question {currentQuestion + 1}</h1>
-          <h2>{questions[currentQuestion].question}</h2>
-          <p>Hint: I'm in <b>Gallery {questions[currentQuestion].hint}!</b></p>
-          <img src={questions[currentQuestion].imageUrl} />
-          
-          <input
-            type="text"
-            value={userAnswer}
-            onChange={handleAnswerChange}
-            placeholder="Your answer..."
-          />
-          <button onClick={handleNextQuestion}>Next Question</button>
-        </>
-      ) : (
-        <>
-          <h1>Quiz complete!</h1>
-          <p>Your correctly spied {score}/10 specimens!</p>
-          <button onClick={handleRestartQuiz}>Play Again?</button>
-        </>
-      )}
+      {content}
     </div>
   );
 }
