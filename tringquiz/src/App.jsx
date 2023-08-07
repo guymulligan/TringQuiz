@@ -209,6 +209,7 @@ function App() {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
+  const [started, setStarted] = useState(0);
 
   useEffect(() => {
     // Shuffle the questions array when the component mounts
@@ -257,31 +258,30 @@ function App() {
 
   let content;
 
-  if (!showResult && shuffledQuestions.length > 0) {
+  if (started === 0) {
     content = (
-      <>
-        <h2>Spy the Specimen!</h2>
-        <p>How to play</p>
-        <button onClick={handleNextQuestion}>Start!</button>
-      </>
+      <div className='landingPage'>
+        <div className = 'landingPage1'><h2>Spy the Specimen!</h2></div>
+        <div className = 'landingPage2'><p>How to play</p></div>
+        <div className = 'landingPage3'><button onClick={() => setStarted(started + 1)}>Start!</button></div>
+      </div>
     );
-
   } 
-  else if (!showResult && shuffledQuestions.length > 0) {
+   else if (!showResult && shuffledQuestions.length > 0 )  {
     content = (
-      <>
-        <h1>Question {currentQuestion + 1}</h1>
-        <h2>{shuffledQuestions[currentQuestion].question}</h2>
-        <p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p>
-        <img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal" />
-        <input
+      <div className = 'questions'>
+        <div className = 'questions1'><h1>Question {currentQuestion + 1}</h1></div>
+        <div className = 'questions2'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
+        <div className = 'questions3'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
+        <div className = 'questions4img'><img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal" /></div>
+        <div className = 'questions5'><input
           type="text"
           value={userAnswer}
           onChange={handleAnswerChange}
           placeholder="Your answer..."
-        />
-        <button onClick={handleNextQuestion}>Next Question</button>
-      </>
+        /> 
+      <button onClick={handleNextQuestion}>Next Question</button></div>
+      </div>
     );
 
   } else if (!showResult && shuffledQuestions.length === 0) {
@@ -292,11 +292,11 @@ function App() {
     );
   } else {
     content = (
-      <>
-        <h1>Quiz complete!</h1>
-        <p>Your correctly spied {score}/10 specimens!</p>
-        <button onClick={handleRestartQuiz}>Play Again?</button>
-      </>
+      <div className='endScreen'>
+        <div className='endScreen1'><h1>Quiz complete!</h1></div>
+        <div className='endScreen2'><p>Your correctly spied {score}/10 specimens!</p></div>
+        <div className='endScreen3'><button onClick={handleRestartQuiz}>Play Again?</button></div>
+      </div>
     );
   }
 
