@@ -202,6 +202,7 @@ const questions = [
     imageUrl: '/7f1d307a-4bb8-41a3-a39c-ffd259f54c23.jpeg'
   },
 ];
+
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
@@ -255,7 +256,18 @@ function App() {
   }
 
   let content;
+
   if (!showResult && shuffledQuestions.length > 0) {
+    content = (
+      <>
+        <h2>Spy the Specimen!</h2>
+        <p>How to play</p>
+        <button onClick={handleNextQuestion}>Start!</button>
+      </>
+    );
+
+  } 
+  else if (!showResult && shuffledQuestions.length > 0) {
     content = (
       <>
         <h1>Question {currentQuestion + 1}</h1>
@@ -271,6 +283,7 @@ function App() {
         <button onClick={handleNextQuestion}>Next Question</button>
       </>
     );
+
   } else if (!showResult && shuffledQuestions.length === 0) {
     content = (
       <>
@@ -293,6 +306,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
