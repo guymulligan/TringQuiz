@@ -261,6 +261,7 @@ function App() {
   if (started === 0) {
     content = (
       <div className='landingPage'>
+      <div className='background-container'></div>
         <div className = 'landingPage1'><h2>Spy the Specimen!</h2></div>
         <div className = 'landingPage2'><p>How to play</p></div>
         <div className = 'landingPage3'><p>Walk around the museum and try to find the animal in the picture. There is a <b>hint</b> at the top of the screen, telling you which gallery you can find the animal in. <b>Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.</p></div>
@@ -271,6 +272,7 @@ function App() {
    else if (!showResult && shuffledQuestions.length > 0 )  {
     content = (
       <div className = 'questions'>
+      <div className='background-container'></div>
         <div className = 'questions1'><h1>Question {currentQuestion + 1}</h1></div>
         <div className = 'questions2'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
         <div className = 'questions3'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
@@ -294,6 +296,7 @@ function App() {
   } else {
     content = (
       <div className='endScreen'>
+        <div className='background-container'></div>
         <div className='endScreen1'><h1>Quiz complete!</h1></div>
         <div className='endScreen2'><p>Your correctly spied {score}/10 specimens!</p></div>
         <div className='endScreen3'><button onClick={handleRestartQuiz}>Play Again?</button></div>
