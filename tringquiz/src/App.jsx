@@ -262,7 +262,11 @@ function App() {
     content = (
       <div className='landingPageDiv'>
       <div className='landingPage'>
-        <div className = 'landingPage1'><h2>Spy the Specimen!</h2></div>
+      <div className = 'landingPage1'>
+        <div className = 'Spy'><h2>Spy</h2></div>
+        <div className = 'the'><h2>the</h2></div>
+        <div className = 'Specimen'><h2>Specimen!</h2></div>
+        </div>
         <div className = 'landingPage2'><p>How to play</p></div>
         <div className = 'landingPage3'><p>Walk around the museum and try to find the animal in the picture. There is a <b>hint</b> at the top of the screen, telling you which gallery you can find the animal in. <b>Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.</p></div>
         <div className = 'landingPage4'><button onClick={() => setStarted(started + 1)}>Start!</button></div>

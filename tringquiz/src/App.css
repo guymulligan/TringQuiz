@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Giraffe';
+    src: url(/Giraffe-8MR2g.otf);
+  }
+
+  @font-face {
+    font-family: 'Aztec';
+    src: url(/AztechForest-9YJa0.otf);
+  }
+  
   body {
     position: fixed;
     top: 0;
@@ -5,8 +15,7 @@
     width: 100%;
     height: 100%;
     background-image: url('/public/forest.jpg');
-    background-size: 150vh;
-    background-position: center center;
+    background-size: 90vh;
     background-repeat: repeat;
     background-position-y: start;
     background-color: rgba(0, 0, 0, 0.5);
@@ -39,7 +48,44 @@
   
   .landingPage1 {
     margin-top: 20px;
+    font-family: 'Aztec';
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Spy {
+    font-size: 50px;
+    margin: -50px;
+    margin-bottom: -60px;
+    color: ;
+    text-shadow:
+      -5px -2px 0 #fff,
+      5px -2px 0 #fff,
+      5px 2px 0 #fff,
+      5px 2px 0 #fff;
+  }
+
+  .the {
     font-size: 30px;
+    margin: -50px;
+    margin-bottom: -60px;
+    color:  #000;
+    text-shadow:
+      -5px -2px 0 #fff,
+      5px -2px 0 #fff,
+      5px 2px 0 #fff,
+      5px 2px 0 #fff;
+  }
+
+  .Specimen {
+    font-size: 50px;
+    margin: -50px;
+    color:  #000;
+    text-shadow:
+      -5px -2px 0 #fff,
+      5px -2px 0 #fff,
+      5px 2px 0 #fff,
+      5px 2px 0 #fff;
   }
   
   .landingPage2 {
