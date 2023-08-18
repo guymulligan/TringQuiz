@@ -13,7 +13,7 @@
     background-size: 100vh;
     background-repeat: repeat;
     background-position-y: start;
-    width: 100%;
+    width: 95%;
     height: 100%;
   }
   
@@ -31,13 +31,13 @@
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   }
   
-  .landingPage1, .landingPage2, .landingPage3, .landingPage4 {
+  .landingPageTitle, .landingPageHowToPlay, .landingPageInstructions, .landingPageButtonAndRoy {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .landingPage1 {
+  .landingPageTitle {
     margin-top: 20px;
     font-family: 'Aztec';
     display: flex;
@@ -79,13 +79,13 @@
       5px 2px 0 #fff;
   }
   
-  .landingPage2 {
+  .landingPageHowToPlay {
     font-size: 20px;
   }
   
-  .landingPage4 {
+  .landingPageButtonAndRoy {
     margin-top: 40px;
-    font-size: 50px;
+    justify-content: space-around;
   }
 
   .Roy {
@@ -94,9 +94,9 @@
     justify-content: flex-end;
 }
 
-.RoyImage {
-  max-width: 30%;
-  height: auto;
+  .RoyImage {
+    max-width: 50%;
+    height: auto;
 }
   
   .questions {
