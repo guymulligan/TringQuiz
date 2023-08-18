@@ -283,19 +283,19 @@ function App() {
   } else if (!showResult && shuffledQuestions.length > 0) {
     content = (
       <div className='questions'>
-        <div className='questions1'><h1>Question {currentQuestion + 1}</h1></div>
-        <div className='questions2'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
-        <div className='questions3'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
-        <div className='questions4img'><img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal" /></div>
-        <div className='questions5'>
+        <div className='questionsTitle'><h1>Question {currentQuestion + 1}</h1></div>
+        <div className='questionsCurrentQuestion'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
+        <div className='questionsHint'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
+        <div className='questionsIMG'><img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal"/></div>
+        <div className='questionsInput'>
           <input
             type="text"
             value={userAnswer}
             onChange={handleAnswerChange}
             placeholder="Your answer..."
-          />
-          <button onClick={handleNextQuestion}>Next Question</button>
-        </div>
+          /> </div>
+         <div className='questionsButton'><button onClick={handleNextQuestion}>Next Question</button></div>
+        
       </div>
     );
   } else if (!showResult && shuffledQuestions.length === 0) {
