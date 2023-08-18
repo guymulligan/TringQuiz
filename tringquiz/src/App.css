@@ -9,7 +9,7 @@
   }
   
   body {
-    background-image: url('/public/forest.jpg');
+    background-image: url('/forest.jpg');
     background-size: 100vh;
     background-repeat: repeat;
     background-position-y: start;
@@ -127,15 +127,13 @@
     height: auto;
 }
   
- 
-  
-.questionsTitle, .questionsCurrentQuestion, .questionsHint, .questionsIMG, .questionsInput, .questionsButton {
+.questionsTitle, .questionsCurrentQuestion, .questionsHint, .questionsIMGdiv, .questionsInput, .questionsButton {
   display: flex;
   justify-content: center;
   align-items: center;
 }
   
-  .questionsTitle {
+.questionsTitle {
     margin-top: 40px;
     font-family: 'Aztec';
     font-size: 30px;
@@ -173,10 +171,11 @@
   }
   
   .questionsIMG {
-    width: 300px;
-    height: 200px;
+    display: flex;
+    justify-content: center;
     border-radius: 15px;
-    overflow: hidden;
+    max-width: 300px;
+    max-height: 300px;
   }
   
 

@@ -286,7 +286,7 @@ function App() {
         <div className='questionsTitle'><h1>Question {currentQuestion + 1}</h1></div>
         <div className='questionsCurrentQuestion'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
         <div className='questionsHint'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
-        <div className='questionsIMG'><img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal"/></div>
+        <div className='questionsIMGdiv'><img className='questionsIMG' src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal"/></div>
         <div className='questionsInput'>
           <input
             type="text"
