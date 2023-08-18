@@ -212,7 +212,6 @@ function App() {
   const [started, setStarted] = useState(0);
 
   useEffect(() => {
-    // Shuffle the questions array when the component mounts
     const shuffledArray = [...questions];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -247,7 +246,6 @@ function App() {
     setUserAnswer('');
     setShowResult(false);
 
-    // Shuffle the questions array for a new quiz
     const shuffledArray = [...questions];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -261,42 +259,50 @@ function App() {
   if (started === 0) {
     content = (
       <div className='landingPageDiv'>
-      <div className='landingPage'>
-      <div className = 'landingPage1'>
-        <div className = 'Spy'><h2>Spy</h2></div>
-        <div className = 'the'><h2>the</h2></div>
-        <div className = 'Specimen'><h2>Specimen!</h2></div>
+        <div className='landingPage'>
+          <div className='landingPage1'>
+            <div className='Spy'><h2>Spy</h2></div>
+            <div className='the'><h2>the</h2></div>
+            <div className='Specimen'><h2>Specimen!</h2></div>
+          </div>
+          <div className='landingPage2'><p>How to play</p></div>
+          <div className='landingPage3'>
+            <p>
+              Walk around the museum and try to find the animal in the picture.
+              There is a <b>hint</b> at the top of the screen, telling you which gallery you can find the animal in.
+              <b>Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.
+            </p>
+          </div>
+          <div className='landingPage4'>
+            <button onClick={() => setStarted(started + 1)}>Start!</button>
+          </div>
+          <div className='Roy'><img src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
         </div>
-        <div className = 'landingPage2'><p>How to play</p></div>
-        <div className = 'landingPage3'><p>Walk around the museum and try to find the animal in the picture. There is a <b>hint</b> at the top of the screen, telling you which gallery you can find the animal in. <b>Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.</p></div>
-        <div className = 'landingPage4'><button onClick={() => setStarted(started + 1)}>Start!</button></div>
-        <div className = 'Roy'><img src = 'SpyTheSpecimenLogo.png'></img></div>
-      </div>
       </div>
     );
-  } 
-   else if (!showResult && shuffledQuestions.length > 0 )  {
+  } else if (!showResult && shuffledQuestions.length > 0) {
     content = (
-      <div className = 'questions'>
-        <div className = 'questions1'><h1>Question {currentQuestion + 1}</h1></div>
-        <div className = 'questions2'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
-        <div className = 'questions3'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
-        <div className = 'questions4img'><img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal" /></div>
-        <div className = 'questions5'><input
-          type="text"
-          value={userAnswer}
-          onChange={handleAnswerChange}
-          placeholder="Your answer..."
-        /> 
-      <button onClick={handleNextQuestion}>Next Question</button></div>
+      <div className='questions'>
+        <div className='questions1'><h1>Question {currentQuestion + 1}</h1></div>
+        <div className='questions2'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
+        <div className='questions3'><p>Hint: I'm in <b>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
+        <div className='questions4img'><img src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal" /></div>
+        <div className='questions5'>
+          <input
+            type="text"
+            value={userAnswer}
+            onChange={handleAnswerChange}
+            placeholder="Your answer..."
+          />
+          <button onClick={handleNextQuestion}>Next Question</button>
+        </div>
       </div>
     );
-
   } else if (!showResult && shuffledQuestions.length === 0) {
     content = (
-      <>
+      <div>
         <p>Loading questions...</p>
-      </>
+      </div>
     );
   } else {
     content = (
@@ -309,7 +315,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className='App'>
       {content}
     </div>
   );

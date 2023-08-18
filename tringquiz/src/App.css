@@ -51,7 +51,7 @@
     font-size: 50px;
     margin: -50px;
     margin-bottom: -60px;
-    color: ;
+    color:  #000;
     text-shadow:
       -5px -2px 0 #fff,
       5px -2px 0 #fff,
@@ -92,7 +92,6 @@
   }
 
   .Roy {
-    margin-top: -300px;
     transform: scaleX(-1);
 }
   
