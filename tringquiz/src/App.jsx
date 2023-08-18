@@ -273,10 +273,9 @@ function App() {
               <b>Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.
             </p>
           </div>
-          <div className = 'landingPageButtonAndRoy'>
-          <div className='Roy'><img className ='RoyImage' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
           <div className='landingPageButton'><button onClick={() => setStarted(started + 1)}>Start!</button></div>
-          </div>
+          <div className='Roy'><img className ='RoyImage' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
+          
         </div>
       </div>
     );

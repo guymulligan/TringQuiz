@@ -36,14 +36,14 @@
       3px 1px 0 #fff;
   }
   
-  .landingPageTitle, .landingPageHowToPlay, .landingPageInstructions, .landingPageButtonAndRoy {
+  .landingPageTitle, .landingPageHowToPlay, .landingPageInstructions, .landingPageButton  {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .landingPageTitle {
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: 'Aztec';
     display: flex;
     flex-direction: column;
@@ -111,20 +111,17 @@
       1px 1px 0 #fff;
   }
   
-  .landingPageButtonAndRoy {
+  .landingPageButton {
     margin-top: 40px;
-    justify-content: space-around;
   }
 
-  .Roy {
-    transform: scaleX(-1);
-    display: flex;
-    justify-content: flex-end;
-}
+
+  
 
   .RoyImage {
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
+    margin-top: 20px;
 }
   
 .questionsTitle, .questionsCurrentQuestion, .questionsHint, .questionsIMGdiv, .questionsInput, .questionsButton {
@@ -202,6 +199,8 @@
     display: flex;
     justify-content: flex-start;
     margin-top: -70px;
+    margin-left: 20px;
+    transform: scaleX(-1);
 }
   
   .endScreen {
