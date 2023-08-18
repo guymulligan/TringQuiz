@@ -295,7 +295,7 @@ function App() {
             placeholder="Your answer..."
           /> </div>
          <div className='questionsButton'><button onClick={handleNextQuestion}>Next Question</button></div>
-        
+         <div className='Roy'><img className ='RoyImage2' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
       </div>
     );
   } else if (!showResult && shuffledQuestions.length === 0) {

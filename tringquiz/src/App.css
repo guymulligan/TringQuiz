@@ -168,14 +168,24 @@
 
   .questionsHint {
     font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 1px 0 #fff,
+      1px 1px 0 #fff;
   }
   
   .questionsIMG {
     display: flex;
     justify-content: center;
     border-radius: 15px;
-    max-width: 300px;
-    max-height: 300px;
+    width: 300px;
+    height: 350px;
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
   }
   
 
@@ -184,6 +194,15 @@
     justify-content: center;
     margin-top: 20px;
   }
+
+
+  .RoyImage2 {
+    max-width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -70px;
+}
   
   .endScreen {
     display: grid;
