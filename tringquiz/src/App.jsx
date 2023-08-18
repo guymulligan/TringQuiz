@@ -276,7 +276,7 @@ function App() {
           <div className='landingPage4'>
             <button onClick={() => setStarted(started + 1)}>Start!</button>
           </div>
-          <div className='Roy'><img src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
+          <div className='Roy'><img className ='RoyImage' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
         </div>
       </div>
     );

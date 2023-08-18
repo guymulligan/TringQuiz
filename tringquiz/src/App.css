@@ -9,15 +9,12 @@
   }
   
   body {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url('/public/forest.jpg');
-    background-size: 90vh;
+    background-size: 100vh;
     background-repeat: repeat;
     background-position-y: start;
+    width: 100%;
+    height: 100%;
   }
   
   h1, p {
@@ -25,13 +22,13 @@
   }
   
   button {
-    background-color: #3498db;
+    background-color: orange;
     color: #fff;
     font-weight: bold;
     padding: 15px 30px;
     font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   }
   
   .landingPage1, .landingPage2, .landingPage3, .landingPage4 {
@@ -94,10 +91,13 @@
   .Roy {
     transform: scaleX(-1);
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
 }
-  
+
+.RoyImage {
+  max-width: 30%;
+  height: auto;
+}
   
   .questions {
     display: grid;
