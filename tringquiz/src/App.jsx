@@ -251,7 +251,7 @@ function App() {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
-    setShuffledQuestions(shuffledArray.slice(0, 10));
+    setShuffledQuestions(shuffledArray.slice(0, 5));
   }
 
   let content;
@@ -307,7 +307,7 @@ function App() {
     content = (
       <div className='endScreen'>
         <div className='endScreen1'><h1>Quiz complete!</h1></div>
-        <div className='endScreen2'><p>Your correctly spied {score}/10 specimens!</p></div>
+        <div className='endScreen2'><p>Your correctly spied {score}/5 specimens!</p></div>
         <div className='endScreen3'><button onClick={handleRestartQuiz}>Play Again?</button></div>
       </div>
     );
