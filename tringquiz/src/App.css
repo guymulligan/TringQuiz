@@ -119,9 +119,13 @@
   
 
   .RoyImage {
-    max-width: 30%;
+    max-width: 20%;
     height: auto;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -70px;
+    margin-left: 70px;
+    transform: scaleX(-1);
 }
   
 .questionsTitle, .questionsCurrentQuestion, .questionsHint, .questionsIMGdiv, .questionsInput, .questionsButton {
@@ -197,7 +201,7 @@
     max-width: 20%;
     height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: -70px;
     margin-left: 20px;
     transform: scaleX(-1);
@@ -208,12 +212,45 @@
     margin-top: 150px;
   }
   
-  .endScreen1, .endScreen2, .endScreen3 {
+  .endScreenTitle, .endScreenInfo, .endScreenButton {
     display: flex;
     justify-content: center;
   }
   
-  .endScreen3 {
+  .endScreenTitle {
+    margin-top: 20px;
+    font-family: 'Aztec';
+    font-size: 20px;
+    color:  #000;
+    text-shadow:
+      -5px -2px 0 #fff,
+      5px -2px 0 #fff,
+      5px 2px 0 #fff,
+      5px 2px 0 #fff;
+  }
+
+  .endScreenInfo {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 1px 0 #fff,
+      1px 1px 0 #fff;
+  }
+
+  .endScreenButton {
     margin-top: 20px;
   }
+
+  .RoyImage3 {
+    max-width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -70px;
+    margin-left: 250px;
+}
   

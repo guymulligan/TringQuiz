@@ -225,7 +225,7 @@ function App() {
   }
 
   function handleNextQuestion() {
-    if (currentQuestion === 9) {
+    if (currentQuestion === 4) {
       setShowResult(true);
     } else {
       const userAnswerTrimmed = userAnswer.toLowerCase().trim();
@@ -306,9 +306,10 @@ function App() {
   } else {
     content = (
       <div className='endScreen'>
-        <div className='endScreen1'><h1>Quiz complete!</h1></div>
-        <div className='endScreen2'><p>Your correctly spied {score}/5 specimens!</p></div>
-        <div className='endScreen3'><button onClick={handleRestartQuiz}>Play Again?</button></div>
+        <div className='endScreenTitle'><h1>Quiz complete!</h1></div>
+        <div className='endScreenInfo'><p>You correctly spied {score}/5 specimens!</p></div>
+        <div className='endScreenButton'><button onClick={handleRestartQuiz}>Play Again?</button></div>
+        <div className='Roy'><img className ='RoyImage3' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
       </div>
     );
   }
