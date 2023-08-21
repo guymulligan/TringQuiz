@@ -270,7 +270,7 @@ function App() {
             <p>
               Walk around the museum and try to find the animal in the picture.
               There is a <b>hint</b> at the top of the screen, telling you which gallery you can find the animal in.
-              <b>Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.
+              <b> Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.
             </p>
           </div>
           <div className='landingPageButton'><button onClick={() => setStarted(started + 1)}>Start!</button></div>

@@ -98,6 +98,7 @@
       3px -1px 0 #fff,
       3px 1px 0 #fff,
       3px 1px 0 #fff;
+      
   }
 
   .landingPageInstructions {
@@ -110,10 +111,13 @@
       1px 1px 0 #fff,
       1px 1px 0 #fff;
       font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+      padding: 10px;
   }
   
   .landingPageButton {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .RoyImage {
@@ -242,6 +246,9 @@
       1px 1px 0 #fff,
       1px 1px 0 #fff;
       font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+      padding: 10px;
   }
 
   .endScreenButton {
