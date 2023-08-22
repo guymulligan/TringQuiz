@@ -7,6 +7,17 @@
     font-family: 'Aztec';
     src: url(/AztechForest-9YJa0.otf);
   }
+
+  @keyframes opacity { to {
+    opacity: 1;
+  }
+  }
+
+  @keyframes growAndShrink { 
+    0% {color: black;}
+    50% {color: orange;}
+    100% {color: black;}
+  }
   
   body {
     background-image: url('/forest.jpg');
@@ -53,12 +64,12 @@
     font-size: 50px;
     margin: -50px;
     margin-bottom: -60px;
-    color:  #000;
     text-shadow:
       -5px -2px 0 #fff,
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
+    animation: growAndShrink 0.3s ease-in-out forwards;
   }
 
   .the {
@@ -71,6 +82,7 @@
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
+      animation: growAndShrink 0.5s ease-in-out forwards;
   }
 
   .Specimen {
@@ -82,6 +94,7 @@
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
+      animation: growAndShrink 0.7s ease-in-out forwards;
   }
   
   .landingPageHowToPlay {
@@ -98,7 +111,9 @@
       3px -1px 0 #fff,
       3px 1px 0 #fff,
       3px 1px 0 #fff;
-      
+      animation: opacity 1s ease forwards;
+      animation-duration: 1s;
+      opacity: 0;
   }
 
   .landingPageInstructions {
@@ -114,11 +129,12 @@
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 15px;
       padding: 10px;
+      animation: opacity 1s ease forwards;
+      animation-duration: 1s;
+      opacity: 0;
+      animation-delay: 0.3s;
   }
   
-  .landingPageButton {
-    margin-top: 20px;
-  }
 
   .RoyImage {
     max-width: 20%;
@@ -128,6 +144,18 @@
     margin-top: -70px;
     margin-left: 70px;
     transform: scaleX(-1);
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+.landingPageButton {
+  margin-top: 20px;
+  animation: opacity 1s ease forwards;
+  animation-duration: 1s;
+  opacity: 0;
+  animation-delay: 0.7s;
 }
   
 .questionsTitle, .questionsCurrentQuestion, .questionsHint, .questionsIMGdiv, .questionsInput, .questionsButton {
@@ -237,6 +265,9 @@
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
   }
 
   .endScreenInfo {
@@ -253,10 +284,18 @@
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 15px;
       padding: 10px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.3s;
   }
 
   .endScreenButton {
     margin-top: 20px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
 
   .RoyImage3 {
@@ -266,4 +305,13 @@
     justify-content: flex-start;
     margin-top: 60px;
     margin-left: 150px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.7s;
 }
+
+
+
+animation-name: blacktowhite;
+  animation-duration: 0.5s;
