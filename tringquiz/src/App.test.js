@@ -1,5 +1,5 @@
-const App = require('./App');
+const handleRestartQuiz = require('./handleRestartQuiz');
 
 test('the page runs', () => {
-    expect(App).toBeTruthy();
+    expect(handleRestartQuiz).toBe(true);
 });
