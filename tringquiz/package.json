@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "jest-css-modules-transform": "^4.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -35,11 +36,11 @@
   "jest": {
     "transform": {
       "\\.[jt]sx?$": "babel-jest",
-      "^.+\\.(css|scss)$":"jest-css-modules-transform", 
-      "testEnvironment": "jsdom"
-    },
+      ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform"
+    }
+    ,
     "moduleNameMapper": {
-      ".*css$": "<rootDir>/src/stub.css"
+      "/.*css$/": "/Users/guymulligan/Documents/TringQuiz/TringQuiz/tringquiz/src/App.css"
     }
   }
 }
