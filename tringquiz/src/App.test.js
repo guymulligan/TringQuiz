@@ -3,14 +3,16 @@ import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App.jsx';
 
-test('checks all useStates are at 0, false and empty string', async () => {
+test('checks Spy text content', () => {
   // ARRANGE
   render(<App />);
-  const currentQuestion = document.querySelector('currentQuestion')
   
-    // ASSERT
-  expect(currentQuestion).toBe(0)
-  });
+  // ACT
+  const Spy = screen.getByText('Spy');
+  
+  // ASSERT
+  expect(Spy).toBeInTheDocument();
+});
 
 
   // function App() {

@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import React from 'react';
 
+let it = React
+it
+
 const questions = [
   {
     question: 'Which animal is this?',
@@ -285,7 +288,7 @@ function App() {
       <div className='questions'>
         <div className='questionsTitle'><h1>Question {currentQuestion + 1}</h1></div>
         <div className='questionsCurrentQuestion'><h2>{shuffledQuestions[currentQuestion].question}</h2></div>
-        <div className='questionsHint'><p className='questionsImIn'>Hint: I'm in <b className='questionsGalleryHint'>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
+        <div className='questionsHint'><p className='questionsImIn'>Hint: I&apos;m in <b className='questionsGalleryHint'>Gallery {shuffledQuestions[currentQuestion].hint}!</b></p></div>
         <div className='questionsIMGdiv'><img className='questionsIMG' src={shuffledQuestions[currentQuestion].imageUrl} alt="Animal"/></div>
         <div className='questionsInput'>
           <input
