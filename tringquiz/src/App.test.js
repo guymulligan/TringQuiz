@@ -3,15 +3,10 @@ import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import App from './App.jsx';
 
-test('checks Spy text content', () => {
-  // ARRANGE
-  render(<App />);
-  
-  // ACT
-  const Spy = screen.getByText('Spy');
-  
-  // ASSERT
-  expect(Spy).toBeInTheDocument();
+// Renders landing page on initial load
+test ('should render landing page on initial load', () => {
+  const {asFragment} = render(<App/>); // Renders App component within a test environment, stores in asFragment() as a snapshot
+  expect(asFragment()).toMatchSnapshot(); // Compares current output to the stored snapshot. So what is in App matches what is rendered
 });
 
 

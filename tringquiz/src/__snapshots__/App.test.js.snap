@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render landing page on initial load 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div
+      class="landingPageDiv"
+    >
+      <div
+        class="landingPage"
+      >
+        <div
+          class="landingPageTitle"
+        >
+          <div
+            class="Spy"
+          >
+            <h2>
+              Spy
+            </h2>
+          </div>
+          <div
+            class="the"
+          >
+            <h2>
+              the
+            </h2>
+          </div>
+          <div
+            class="Specimen"
+          >
+            <h2>
+              Specimen!
+            </h2>
+          </div>
+        </div>
+        <div
+          class="landingPageHowToPlay"
+        >
+          <p>
+            How to play
+          </p>
+        </div>
+        <div
+          class="landingPageInstructions"
+        >
+          <p>
+            Walk around the museum and try to find the animal in the picture. There is a 
+            <b>
+              hint
+            </b>
+             at the top of the screen, telling you which gallery you can find the animal in.
+            <b>
+               Remember:
+            </b>
+             spelling matters and 
+            <i>
+              always
+            </i>
+             be respectful of fellow museum goers.
+          </p>
+        </div>
+        <div
+          class="landingPageButton"
+        >
+          <button>
+            Start!
+          </button>
+        </div>
+        <div
+          class="Roy"
+        >
+          <img
+            alt="Logo"
+            class="RoyImage"
+            src="SpyTheSpecimenLogo.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
