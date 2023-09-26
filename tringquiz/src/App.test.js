@@ -51,13 +51,37 @@ test('clicking questionsButton 5 times takes us to the end screen', () => {
   const landingPageButton = screen.getByText('Start!');
   fireEvent.click(landingPageButton);
 
-  // Find and click the 'questionsButton' on the landing page
+  // Find and click the 'questionsButton' 5 times on the landing page
   const questionsButton = screen.getByText('Next Question')
-
   for (let i=0; i < 5; i++) {
   fireEvent.click(questionsButton);
   }
 
   // After clicking the button, check that the page content changes
   expect(screen.getByText('Quiz complete!')).toBeInTheDocument();
+});
+
+test('endScreenButton returns us to the questions', () => {
+  const { container } = render(<App />);
+  
+  // Verify that you are initially on the landing page
+  expect(screen.getByText('Spy')).toBeInTheDocument();
+
+  // Find and click the 'landingPageButton' on the landing page
+  const landingPageButton = screen.getByText('Start!');
+  fireEvent.click(landingPageButton);
+
+  // Find and click the 'questionsButton' 5 times on the landing page
+  const questionsButton = screen.getByText('Next Question')
+  for (let i=0; i < 5; i++) {
+  fireEvent.click(questionsButton);
+  }
+
+  // Find and click the 'questionsButton' 5 times on the landing page
+  const endScreenButton = screen.getByText('Play Again?')
+  fireEvent.click(endScreenButton);
+
+
+  // After clicking the button, check that the page content changes
+  expect(screen.getByText('Question 1')).toBeInTheDocument();
 });
