@@ -271,7 +271,9 @@
   }
 
   .endScreenInfo {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: black;
@@ -281,14 +283,7 @@
       1px 1px 0 #fff,
       1px 1px 0 #fff;
       font-weight: bold;
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 15px;
-      padding: 10px;
-    animation: opacity 1s ease forwards;
-    animation-duration: 1s;
-    opacity: 0;
-    animation-delay: 0.3s;
-    padding: 10px;
+      margin-top: 10px;
   }
 
   .endScreenButton {
