@@ -76,4 +76,3 @@ test('endScreenButton returns us to the questions', () => {
   // After clicking the button, check that the page content changes and takes us back to Q1
   expect(screen.getByText('Question 1')).toBeInTheDocument();
 });
-
