@@ -16,18 +16,27 @@ test('clicking landingPageButton changes the page', () => {
   expect(screen.getByText('Spy')).toBeInTheDocument();
 
   // Find and click the 'landingPageButton'
-  const landingPageButton = screen.getByText('Start!'); // Adjust the text as per your actual button text
+  const landingPageButton = screen.getByText('Start!');
   fireEvent.click(landingPageButton);
 
   // After clicking the button, check that the page content changes
   expect(screen.getByText('Question 1')).toBeInTheDocument();
 });
 
+test('clicking questionsButton takes us to the next question', () => {
+  const { container } = render(<App />);
+  
+  // Verify that you are initially on the landing page
+  expect(screen.getByText('Spy')).toBeInTheDocument();
 
-  // function App() {
-  //   const [currentQuestion, setCurrentQuestion] = useState(0);
-  //   const [userAnswer, setUserAnswer] = useState('');
-  //   const [showResult, setShowResult] = useState(false);
-  //   const [score, setScore] = useState(0);
-  //   const [shuffledQuestions, setShuffledQuestions] = useState([]);
-  //   const [started, setStarted] = useState(0);
+  // Find and click the 'landingPageButton' on the landing page
+  const landingPageButton = screen.getByText('Start!');
+  fireEvent.click(landingPageButton);
+
+  // Find and click the 'questionsButton' on the landing page
+  const questionsButton = screen.getByText('Next Question')
+  fireEvent.click(questionsButton);
+
+  // After clicking the button, check that the page content changes
+  expect(screen.getByText('Question 2')).toBeInTheDocument();
+});
