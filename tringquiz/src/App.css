@@ -286,6 +286,10 @@
       margin-top: 10px;
   }
 
+  .endScreenInfoScore {
+    color: orange;
+  }
+
   .endScreenButton {
     margin-top: 20px;
     animation: opacity 1s ease forwards;

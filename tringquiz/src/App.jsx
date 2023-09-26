@@ -311,7 +311,7 @@ function App() {
     content = (
       <div className='endScreen'>
         <div className='endScreenTitle'><h1>Quiz complete!</h1></div>
-        <div className='endScreenInfo'><p>You correctly spied {score}/5 specimens!</p></div>
+        <div className='endScreenInfo'><p>You correctly spied <b className='endScreenInfoScore'> {score}/5</b> specimens!</p></div>
         <div className='endScreenButton'><button onClick={handleRestartQuiz}>Play Again?</button></div>
         <div className='Roy'><img className ='RoyImage3' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
       </div>
