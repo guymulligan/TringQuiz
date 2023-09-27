@@ -201,8 +201,8 @@ const questions = [
   {
     question: 'Which animal is this?',
     hint: "6",
-    answer: 'star tortoise',
-    answer2: 'star tortoise',
+    answer: 'Star tortoise',
+    answer2: 'Star tortoise',
     imageUrl: '/7f1d307a-4bb8-41a3-a39c-ffd259f54c23.jpeg'
   },
 ];
@@ -236,19 +236,20 @@ function App() {
       const userAnswerTrimmed = userAnswer.toLowerCase().trim();
       const correctAnswerTrimmed = shuffledQuestions[currentQuestion].answer.toLowerCase().trim();
       const correctAnswerTrimmed2 = shuffledQuestions[currentQuestion].answer2.toLowerCase().trim();
-      
-      
+  
       if (userAnswerTrimmed === correctAnswerTrimmed || userAnswerTrimmed === correctAnswerTrimmed2) {
-        setAnswerArray(answerArray.concat(userAnswer + '✅'));
+        setAnswerArray((prevAnswerArray) => [...prevAnswerArray, `${shuffledQuestions[currentQuestion].answer} ✅`]);
         setScore((prevScore) => prevScore + 1);
       } else {
-        setAnswerArray(answerArray.concat(userAnswer + '❌'));
+        setAnswerArray((prevAnswerArray) => [...prevAnswerArray, `${shuffledQuestions[currentQuestion].answer} ❌`]);
       }
-    
+  
       setCurrentQuestion((prev) => prev + 1);
       setUserAnswer('');
     }
+    console.log(answerArray)
   }
+  
   
 
   function handleRestartQuiz() {
@@ -256,6 +257,7 @@ function App() {
     setUserAnswer('');
     setShowResult(false);
     setScore(0);
+    setAnswerArray([]);
 
     const shuffledArray = [...questions];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
