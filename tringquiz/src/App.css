@@ -290,6 +290,23 @@
     color: orange;
   }
 
+  .endScreenAnswerCheck {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      1px 1px 0 #fff,
+      1px 1px 0 #fff;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+
   .endScreenButton {
     margin-top: 20px;
     animation: opacity 1s ease forwards;

@@ -214,6 +214,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [started, setStarted] = useState(0);
+  const [answerArray, setAnswerArray] = useState([])
 
   useEffect(() => {
     const shuffledArray = [...questions];
@@ -221,7 +222,7 @@ function App() {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
-    setShuffledQuestions(shuffledArray.slice(0, 10));
+    setShuffledQuestions(shuffledArray.slice(0, 5));
   }, []);
 
   function handleAnswerChange(event) {
@@ -229,26 +230,31 @@ function App() {
   }
 
   function handleNextQuestion() {
-    if (currentQuestion === 4) {
+    if (currentQuestion === shuffledQuestions.length - 1) {
       setShowResult(true);
-    } else {
+    } else if (currentQuestion < shuffledQuestions.length - 1) {
       const userAnswerTrimmed = userAnswer.toLowerCase().trim();
       const correctAnswerTrimmed = shuffledQuestions[currentQuestion].answer.toLowerCase().trim();
       const correctAnswerTrimmed2 = shuffledQuestions[currentQuestion].answer2.toLowerCase().trim();
-
+  
       if (userAnswerTrimmed === correctAnswerTrimmed || userAnswerTrimmed === correctAnswerTrimmed2) {
+        setAnswerArray(answerArray.concat(userAnswerTrimmed + '✅'));
         setScore((prevScore) => prevScore + 1);
+      } else {
+        setAnswerArray(answerArray.concat(userAnswerTrimmed + '❌'));
       }
-
+  
       setCurrentQuestion((prev) => prev + 1);
       setUserAnswer('');
     }
   }
+  
 
   function handleRestartQuiz() {
     setCurrentQuestion(0);
     setUserAnswer('');
     setShowResult(false);
+    setScore(0);
 
     const shuffledArray = [...questions];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -312,6 +318,13 @@ function App() {
       <div className='endScreen'>
         <div className='endScreenTitle'><h1>Quiz complete!</h1></div>
         <div className='endScreenInfo'><p>You correctly spied <b className='endScreenInfoScore'> {score}/5</b> specimens!</p></div>
+        <div className='endScreenAnswerCheck'>
+          <p>1. {answerArray[0]}</p>
+          <p>2. {answerArray[1]}</p>
+          <p>3. {answerArray[2]}</p>
+          <p>4. {answerArray[3]}</p>
+          <p>5. {answerArray[4]}</p>
+          </div>
         <div className='endScreenButton'><button onClick={handleRestartQuiz}>Play Again?</button></div>
         <div className='Roy'><img className ='RoyImage3' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
       </div>
