@@ -316,12 +316,13 @@
   }
 
   .RoyImage3 {
-    max-width: 60%;
+    max-width: 20%;
     height: auto;
     display: flex;
     justify-content: flex-start;
-    margin-top: 60px;
-    margin-left: 150px;
+    margin-top: -70px;
+    margin-left: 20px;
+    transform: scaleX(-1);
     animation: opacity 1s ease forwards;
     animation-duration: 1s;
     opacity: 0;

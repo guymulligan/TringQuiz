@@ -236,14 +236,15 @@ function App() {
       const userAnswerTrimmed = userAnswer.toLowerCase().trim();
       const correctAnswerTrimmed = shuffledQuestions[currentQuestion].answer.toLowerCase().trim();
       const correctAnswerTrimmed2 = shuffledQuestions[currentQuestion].answer2.toLowerCase().trim();
-  
+      
+      
       if (userAnswerTrimmed === correctAnswerTrimmed || userAnswerTrimmed === correctAnswerTrimmed2) {
-        setAnswerArray(answerArray.concat(userAnswerTrimmed + '✅'));
+        setAnswerArray(answerArray.concat(userAnswer + '✅'));
         setScore((prevScore) => prevScore + 1);
       } else {
-        setAnswerArray(answerArray.concat(userAnswerTrimmed + '❌'));
+        setAnswerArray(answerArray.concat(userAnswer + '❌'));
       }
-  
+    
       setCurrentQuestion((prev) => prev + 1);
       setUserAnswer('');
     }
