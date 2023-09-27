@@ -246,6 +246,7 @@ function App() {
   
       setCurrentQuestion((prev) => prev + 1);
       setUserAnswer('');
+      setStarted(started + 1)
     }
     console.log(answerArray)
   }
@@ -258,6 +259,7 @@ function App() {
     setShowResult(false);
     setScore(0);
     setAnswerArray([]);
+    setStarted(0);
 
     const shuffledArray = [...questions];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -292,7 +294,7 @@ function App() {
         </div>
       </div>
     );
-  } else if (!showResult && shuffledQuestions.length > 0) {
+  } else if (started < 6) {
     content = (
       <div className='questions'>
         <div className='questionsTitle'><h1>Question {currentQuestion + 1}</h1></div>
@@ -310,13 +312,7 @@ function App() {
          <div className='Roy'><img className ='RoyImage2' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
       </div>
     );
-  } else if (!showResult && shuffledQuestions.length === 0) {
-    content = (
-      <div>
-        <p>Loading questions...</p>
-      </div>
-    );
-  } else {
+  } else if (started === 6) {
     content = (
       <div className='endScreen'>
         <div className='endScreenTitle'><h1>Quiz complete!</h1></div>
