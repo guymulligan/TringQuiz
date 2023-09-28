@@ -239,7 +239,7 @@ function App() {
         setAnswerArray((prevAnswerArray) => [...prevAnswerArray, `${shuffledQuestions[currentQuestion].answer} ✅`]);
         setScore((prevScore) => prevScore + 1);
       } else {
-        setAnswerArray((prevAnswerArray) => [...prevAnswerArray, `${shuffledQuestions[currentQuestion].answer} ❌`]);
+        setAnswerArray((prevAnswerArray) => [...prevAnswerArray, `${userAnswer} ❌ Answer: ${shuffledQuestions[currentQuestion].answer}`]);
       }
   
       setCurrentQuestion((prev) => prev + 1);
