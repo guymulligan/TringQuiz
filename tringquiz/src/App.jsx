@@ -210,11 +210,10 @@ const questions = [
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswer, setUserAnswer] = useState('');
-  const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
-  const [started, setStarted] = useState(0);
-  const [answerArray, setAnswerArray] = useState([])
+  const [answerArray, setAnswerArray] = useState([]);
+  const [clickedButton, setClickedButton] = useState(0)
 
   useEffect(() => {
     const shuffledArray = [...questions];
@@ -230,9 +229,7 @@ function App() {
   }
 
   function handleNextQuestion() {
-    if (currentQuestion === shuffledQuestions.length - 1) {
-      setShowResult(true);
-    } else if (currentQuestion < shuffledQuestions.length - 1) {
+      if (currentQuestion < shuffledQuestions.length - 1) {
       const userAnswerTrimmed = userAnswer.toLowerCase().trim();
       const correctAnswerTrimmed = shuffledQuestions[currentQuestion].answer.toLowerCase().trim();
       const correctAnswerTrimmed2 = shuffledQuestions[currentQuestion].answer2.toLowerCase().trim();
@@ -246,9 +243,11 @@ function App() {
   
       setCurrentQuestion((prev) => prev + 1);
       setUserAnswer('');
-      setStarted(started + 1)
+      setClickedButton(clickedButton + 1)
+
+      if (clickedButton === 5) {setClickedButton(clickedButton+1)}
+
     }
-    console.log(answerArray)
   }
   
   
@@ -260,6 +259,7 @@ function App() {
     setScore(0);
     setAnswerArray([]);
     setStarted(0);
+    setClickedButton(1);
 
     const shuffledArray = [...questions];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
@@ -271,7 +271,7 @@ function App() {
 
   let content;
 
-  if (started === 0) {
+  if (clickedButton === 0) {
     content = (
       <div className='landingPageDiv'>
         <div className='landingPage'>
@@ -288,13 +288,13 @@ function App() {
               <b> Remember:</b> spelling matters and <i>always</i> be respectful of fellow museum goers.
             </p>
           </div>
-          <div className='landingPageButton'><button onClick={() => setStarted(started + 1)}>Start!</button></div>
+          <div className='landingPageButton'><button onClick={() => setClickedButton(clickedButton + 1)}>Start!</button></div>
           <div className='Roy'><img className ='RoyImage' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
           
         </div>
       </div>
     );
-  } else if (started < 6) {
+  } else if (clickedButton === 5 || clickedButton === 4 || clickedButton === 3 || clickedButton === 2 || clickedButton === 1) {
     content = (
       <div className='questions'>
         <div className='questionsTitle'><h1>Question {currentQuestion + 1}</h1></div>
@@ -312,7 +312,7 @@ function App() {
          <div className='Roy'><img className ='RoyImage2' src='SpyTheSpecimenLogo.png' alt="Logo" /></div>
       </div>
     );
-  } else if (started === 6) {
+  } else if (clickedButton === 6) {
     content = (
       <div className='endScreen'>
         <div className='endScreenTitle'><h1>Quiz complete!</h1></div>
