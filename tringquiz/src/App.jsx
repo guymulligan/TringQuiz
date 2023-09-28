@@ -213,7 +213,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   const [answerArray, setAnswerArray] = useState([]);
-  const [clickedButton, setClickedButton] = useState(0)
+  const [clickedButton, setClickedButton] = useState(0);
+  console.log("clickedButton", clickedButton)
 
   useEffect(() => {
     const shuffledArray = [...questions];
@@ -221,7 +222,7 @@ function App() {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
-    setShuffledQuestions(shuffledArray.slice(0, 5));
+    setShuffledQuestions(shuffledArray.slice(0, 6));
   }, []);
 
   function handleAnswerChange(event) {
@@ -255,10 +256,8 @@ function App() {
   function handleRestartQuiz() {
     setCurrentQuestion(0);
     setUserAnswer('');
-    setShowResult(false);
     setScore(0);
     setAnswerArray([]);
-    setStarted(0);
     setClickedButton(1);
 
     const shuffledArray = [...questions];
@@ -266,7 +265,7 @@ function App() {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
-    setShuffledQuestions(shuffledArray.slice(0, 5));
+    setShuffledQuestions(shuffledArray.slice(0, 6));
   }
 
   let content;
@@ -335,6 +334,8 @@ function App() {
       {content}
     </div>
   );
+
+  
 }
 
 export default App;
