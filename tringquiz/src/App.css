@@ -301,9 +301,8 @@
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
-    animation: opacity 1s ease forwards;
+    animation: growAndShrink 0.7s ease-in-out forwards;
     animation-duration: 1s;
-    opacity: 0;
   }
 
   .endScreenInfo {
