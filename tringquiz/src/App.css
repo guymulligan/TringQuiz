@@ -112,6 +112,7 @@
       3px 1px 0 #fff,
       3px 1px 0 #fff;
       animation: opacity 1s ease forwards;
+      animation: opacity 1s ease forwards;
       animation-duration: 1s;
       opacity: 0;
   }
@@ -129,10 +130,10 @@
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 15px;
       padding: 10px;
-      animation: opacity 1s ease forwards;
-      animation-duration: 1s;
-      opacity: 0;
-      animation-delay: 0.3s;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.3s;
   }
   
 
@@ -174,6 +175,9 @@
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
   }
 
   .questionsCurrentQuestion {
@@ -186,10 +190,18 @@
       5px -2px 0 #fff,
       5px 2px 0 #fff,
       5px 2px 0 #fff;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.3s;
   }
 
   .questionsInput {
     margin-top: 10px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
 
   input {
@@ -197,6 +209,10 @@
     height: 50px;
     border-radius: 15px;
     border-color: orange;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
 
   .questionsImIn {
@@ -210,10 +226,18 @@
       1px 1px 0 #fff;
       font-weight: bold;
       margin-top: -10px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
 
   .questionsGalleryHint {
     color: orange;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
   
   .questionsIMG {
@@ -225,6 +249,10 @@
     max-width: 100%;
     max-height: 250px;
     object-fit: cover;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
   
 
@@ -232,6 +260,10 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.7s;
   }
 
 
@@ -243,6 +275,10 @@
     margin-top: -70px;
     margin-left: 20px;
     transform: scaleX(-1);
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.7s;
 }
   
   .endScreen {
@@ -284,10 +320,18 @@
       1px 1px 0 #fff;
       font-weight: bold;
       margin-top: 10px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.3s;
   }
 
   .endScreenInfoScore {
     color: orange;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.3s;
   }
 
   .endScreenAnswerCheck {
@@ -305,6 +349,10 @@
       1px 1px 0 #fff;
       font-weight: bold;
       margin-top: 10px;
+    animation: opacity 1s ease forwards;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
 
   .endScreenButton {
@@ -312,7 +360,7 @@
     animation: opacity 1s ease forwards;
     animation-duration: 1s;
     opacity: 0;
-    animation-delay: 0.5s;
+    animation-delay: 0.7s;
   }
 
   .RoyImage3 {
@@ -326,5 +374,5 @@
     animation: opacity 1s ease forwards;
     animation-duration: 1s;
     opacity: 0;
-    animation-delay: 0.7s;
+    animation-delay: 0.9s;
 }
